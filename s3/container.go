@@ -120,7 +120,7 @@ func (c *container) Put(name string, r io.Reader, size int64, metadata map[strin
 		ContentLength: aws.Int64(size),
 		Body:          bytes.NewReader(content),
 		Metadata:      mdPrepped, // map[string]*string,
-		Acl:           aws.String("public"),
+		ACL:           aws.String("public"),
 	}
 
 	// Only Etag is returned.
